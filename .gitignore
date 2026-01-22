@@ -1,0 +1,3 @@
+data/*.duckdb
+data/feeds/epss.csv
+__pycache__/
