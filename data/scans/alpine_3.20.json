@@ -1,0 +1,63 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2026-09-22T10:00:41.757350903Z",
+  "ArtifactName": "alpine:3.20",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "OS": {
+      "Family": "alpine",
+      "Name": "3.20.10",
+      "EOSL": true
+    },
+    "ImageID": "sha256:bf8527eb54c3680e728d5b4b383a8ba730d72dae7236fbc8dff97ed6b224a731",
+    "DiffIDs": [
+      "sha256:08bc4e534116aa76b16015484b82eac51f9a593416feae9296c8a2d4bb7aa4a2"
+    ],
+    "RepoTags": [
+      "alpine:3.20"
+    ],
+    "RepoDigests": [
+      "alpine@sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc"
+    ],
+    "ImageConfig": {
+      "architecture": "amd64",
+      "created": "2026-04-16T23:53:26.803599608Z",
+      "history": [
+        {
+          "created": "2026-04-16T23:53:26.803599608Z",
+          "created_by": "ADD alpine-minirootfs-3.20.10-x86_64.tar.gz / # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2026-04-16T23:53:26.803599608Z",
+          "created_by": "CMD [\"/bin/sh\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:08bc4e534116aa76b16015484b82eac51f9a593416feae9296c8a2d4bb7aa4a2"
+        ]
+      },
+      "config": {
+        "Cmd": [
+          "/bin/sh"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "WorkingDir": "/"
+      }
+    }
+  },
+  "Results": [
+    {
+      "Target": "alpine:3.20 (alpine 3.20.10)",
+      "Class": "os-pkgs",
+      "Type": "alpine"
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2026-09-22T10:00:40.1336153Z",
+  "ArtifactName": "ubuntu:20.04",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "OS": {
+      "Family": "ubuntu",
+      "Name": "20.04",
+      "EOSL": true
+    },
+    "ImageID": "sha256:b7bab04fd9aa0c771e5720bf0cc7cbf993fd6946645983d9096126e5af45d713",
+    "DiffIDs": [
+      "sha256:470b66ea5123c93b0d5606e4213bf9e47d3d426b640d32472e4ac213186c4bb6"
+    ],
+    "RepoTags": [
+      "ubuntu:20.04"
+    ],
+    "RepoDigests": [
+      "ubuntu@sha256:8feb4d8ca5354def3d8fce243717141ce31e2c428701f6682bd2fafe15388214"
+    ],
+    "ImageConfig": {
+      "architecture": "amd64",
+      "container": "cb891303fd97ec1335008dbe50f771752a235e94bac0e8b06e2b020dca009a50",
+      "created": "2025-04-08T10:42:48.947155373Z",
+      "docker_version": "24.0.7",
+      "history": [
+        {
+          "created": "2025-04-08T10:42:46.731796017Z",
+          "created_by": "/bin/sh -c #(nop)  ARG RELEASE",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-04-08T10:42:46.756436969Z",
+          "created_by": "/bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-04-08T10:42:46.777916661Z",
+          "created_by": "/bin/sh -c #(nop)  LABEL org.opencontainers.image.ref.name=ubuntu",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-04-08T10:42:46.801051129Z",
+          "created_by": "/bin/sh -c #(nop)  LABEL org.opencontainers.image.version=20.04",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-04-08T10:42:48.662111483Z",
+          "created_by": "/bin/sh -c #(nop) ADD file:f9ee450324e6ff2c946bc9aae5cf7e35e240dbd387d8b9f5ee1ed5b8434b9894 in / "
+        },
+        {
+          "created": "2025-04-08T10:42:48.947155373Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"/bin/bash\"]",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:470b66ea5123c93b0d5606e4213bf9e47d3d426b640d32472e4ac213186c4bb6"
+        ]
+      },
+      "config": {
+        "Cmd": [
+          "/bin/bash"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "Image": "sha256:a4f4aac46bc2829ab75a33c79ebe803110dd26e79bbd1dce17875492019b230c",
+        "Labels": {
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      }
+    }
+  },
+  "Results": [
+    {
+      "Target": "ubuntu:20.04 (ubuntu 20.04)",
+      "Class": "os-pkgs",
+      "Type": "ubuntu",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2025-4802",
+          "PkgID": "libc-bin@2.31-0ubuntu9.17",
+          "PkgName": "libc-bin",
+          "PkgIdentifier": {
+            "PURL": "pkg:deb/ubuntu/libc-bin@2.31-0ubuntu9.17?arch=amd64\u0026distro=ubuntu-20.04",
+            "UID": "2f2903a750205c36"
+          },
+          "InstalledVersion": "2.31-0ubuntu9.17",
+          "FixedVersion": "2.31-0ubuntu9.18",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:13b7e930469f6d3575a320709035c6acf6f5485a76abcf03d1b92a64c09c2476",
+            "DiffID": "sha256:470b66ea5123c93b0d5606e4213bf9e47d3d426b640d32472e4ac213186c4bb6"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-4802",
+          "DataSource": {
+            "ID": "ubuntu",
+            "Name": "Ubuntu CVE Tracker",
+            "URL": "https://git.launchpad.net/ubuntu-cve-tracker"
+          },
+          "Title": "glibc: static setuid binary dlopen may incorrectly search LD_LIBRARY_PATH",
+          "Description": "Untrusted LD_LIBRARY_PATH environment variable vulnerability in the GNU C Library version 2.27 to 2.38 allows attacker controlled loading of dynamically shared library in statically compiled setuid binaries that call dlopen (including internal dlopen calls after setlocale or calls to NSS functions such as getaddrinfo).",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-426"
+          ],
+          "VendorSeverity": {
+            "alma": 2,
+            "amazon": 3,
+            "azure": 3,
+            "oracle-oval": 2,
+            "photon": 3,
+            "redhat": 2,
+            "rocky": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "V3Score": 7
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/05/16/7",
+            "http://www.openwall.com/lists/oss-security/2025/05/17/2",
+            "https://access.redhat.com/errata/RHSA-2025:8655",
+            "https://access.redhat.com/security/cve/CVE-2025-4802",
+            "https://bugzilla.redhat.com/2367468",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2367468",
+            "https://creativecommons.org/licenses/by/4.0/",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-4802",
+            "https://errata.almalinux.org/9/ALSA-2025-8655.html",
+            "https://errata.rockylinux.org/RLSA-2025:8655",
+            "https://inbox.sourceware.org/libc-announce/3ac997b0-28a5-4129-af53-675efe4c2dec@redhat.com/T/#u",
+            "https://linux.oracle.com/cve/CVE-2025-4802.html",
+            "https://linux.oracle.com/errata/ELSA-2025-8686.html",
+            "https://lists.debian.org/debian-lts-announce/2025/05/msg00033.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-4802",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=32976",
+            "https://sourceware.org/cgit/glibc/commit/?id=1e18586c5820e329f741d5c710275e165581380e",
+            "https://sourceware.org/cgit/glibc/commit/?id=5451fa962cd0a90a0e2ec1d8910a559ace02bba0",
+            "https://ubuntu.com/security/notices/USN-7541-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-4802",
+            "https://www.openwall.com/lists/oss-security/2025/05/16/7",
+            "https://www.openwall.com/lists/oss-security/2025/05/17/2"
+          ],
+          "PublishedDate": "2025-05-16T20:15:22.28Z",
+          "LastModifiedDate": "2026-06-17T09:34:02.647Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-4802",
+          "PkgID": "libc6@2.31-0ubuntu9.17",
+          "PkgName": "libc6",
+          "PkgIdentifier": {
+            "PURL": "pkg:deb/ubuntu/libc6@2.31-0ubuntu9.17?arch=amd64\u0026distro=ubuntu-20.04",
+            "UID": "962c34b87fafa85b"
+          },
+          "InstalledVersion": "2.31-0ubuntu9.17",
+          "FixedVersion": "2.31-0ubuntu9.18",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:13b7e930469f6d3575a320709035c6acf6f5485a76abcf03d1b92a64c09c2476",
+            "DiffID": "sha256:470b66ea5123c93b0d5606e4213bf9e47d3d426b640d32472e4ac213186c4bb6"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-4802",
+          "DataSource": {
+            "ID": "ubuntu",
+            "Name": "Ubuntu CVE Tracker",
+            "URL": "https://git.launchpad.net/ubuntu-cve-tracker"
+          },
+          "Title": "glibc: static setuid binary dlopen may incorrectly search LD_LIBRARY_PATH",
+          "Description": "Untrusted LD_LIBRARY_PATH environment variable vulnerability in the GNU C Library version 2.27 to 2.38 allows attacker controlled loading of dynamically shared library in statically compiled setuid binaries that call dlopen (including internal dlopen calls after setlocale or calls to NSS functions such as getaddrinfo).",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-426"
+          ],
+          "VendorSeverity": {
+            "alma": 2,
+            "amazon": 3,
+            "azure": 3,
+            "oracle-oval": 2,
+            "photon": 3,
+            "redhat": 2,
+            "rocky": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "V3Score": 7
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/05/16/7",
+            "http://www.openwall.com/lists/oss-security/2025/05/17/2",
+            "https://access.redhat.com/errata/RHSA-2025:8655",
+            "https://access.redhat.com/security/cve/CVE-2025-4802",
+            "https://bugzilla.redhat.com/2367468",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2367468",
+            "https://creativecommons.org/licenses/by/4.0/",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-4802",
+            "https://errata.almalinux.org/9/ALSA-2025-8655.html",
+            "https://errata.rockylinux.org/RLSA-2025:8655",
+            "https://inbox.sourceware.org/libc-announce/3ac997b0-28a5-4129-af53-675efe4c2dec@redhat.com/T/#u",
+            "https://linux.oracle.com/cve/CVE-2025-4802.html",
+            "https://linux.oracle.com/errata/ELSA-2025-8686.html",
+            "https://lists.debian.org/debian-lts-announce/2025/05/msg00033.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-4802",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=32976",
+            "https://sourceware.org/cgit/glibc/commit/?id=1e18586c5820e329f741d5c710275e165581380e",
+            "https://sourceware.org/cgit/glibc/commit/?id=5451fa962cd0a90a0e2ec1d8910a559ace02bba0",
+            "https://ubuntu.com/security/notices/USN-7541-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-4802",
+            "https://www.openwall.com/lists/oss-security/2025/05/16/7",
+            "https://www.openwall.com/lists/oss-security/2025/05/17/2"
+          ],
+          "PublishedDate": "2025-05-16T20:15:22.28Z",
+          "LastModifiedDate": "2026-06-17T09:34:02.647Z"
+        }
+      ]
+    }
+  ]
+}
