@@ -1,5 +1,7 @@
 # Vulnerability Prioritization
 
+_Portfolio sprint timeline: January–September 2026. Reported results retain their actual run dates._
+
 Trivy scans of ten container images, enriched with **CISA KEV** (what is being exploited) and
 **EPSS** (what is likely to be), then prioritised in SQL into a work queue a team can actually
 execute — instead of a list of 3,934 CVEs sorted by CVSS.
