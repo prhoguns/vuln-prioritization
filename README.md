@@ -86,3 +86,7 @@ matters because a finding with no vendor fix is a different kind of work.
 - Asset context: internet-facing × KEV = P0 regardless of fix; internal batch job × P1 = P2.
 - Export the queue to Jira, one ticket per (image, package) from P5.
 - Track over time: re-scan weekly, chart P0+P1 count — the number a CISO wants to see go down.
+
+## Acknowledgments
+
+AI tools assisted with documentation and repository organization.
