@@ -20,5 +20,5 @@ select
 from findings f
 left join kev k using (cve)
 left join epss e using (cve)
-order by tier, e.epss desc nulls last, f.cvss_v3 desc nulls last
+order by tier, e.epss desc nulls last, f.cvss_v3 desc nulls last, f.image, f.package, f.cve
 limit 40;

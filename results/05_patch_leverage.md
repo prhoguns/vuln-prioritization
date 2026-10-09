@@ -14,7 +14,7 @@ left join kev k using (cve)
 left join epss e using (cve)
 where fixed is not null
 group by 1, 2, 3
-order by kev_closed desc, crit_high_closed desc, findings_closed desc
+order by kev_closed desc, crit_high_closed desc, findings_closed desc, image, package
 limit 15;
 ```
 
@@ -24,14 +24,14 @@ limit 15;
 | nginx:1.18 | libwebp6 | 0.6.1-2 | 0.6.1-2+deb10u3 | 13 | 13 | 1 | 1 |
 | nginx:1.18 | libnghttp2-14 | 1.36.0-2+deb10u1 | 1.36.0-2+deb10u3 | 3 | 2 | 1 | 1 |
 | node:14 | libnghttp2-14 | 1.36.0-2+deb10u1 | 1.36.0-2+deb10u3 | 3 | 2 | 1 | 1 |
-| node:14 | libwebpdemux2 | 0.6.1-2+deb10u1 | 0.6.1-2+deb10u3 | 2 | 2 | 1 | 1 |
 | node:14 | libwebp-dev | 0.6.1-2+deb10u1 | 0.6.1-2+deb10u3 | 2 | 2 | 1 | 1 |
 | node:14 | libwebp6 | 0.6.1-2+deb10u1 | 0.6.1-2+deb10u3 | 2 | 2 | 1 | 1 |
+| node:14 | libwebpdemux2 | 0.6.1-2+deb10u1 | 0.6.1-2+deb10u3 | 2 | 2 | 1 | 1 |
 | node:14 | libwebpmux3 | 0.6.1-2+deb10u1 | 0.6.1-2+deb10u3 | 2 | 2 | 1 | 1 |
 | postgres:11 | stdlib | v1.16.7 | 1.25.9, 1.26.2 | 121 | 65 | 0 | 0.92 |
 | postgres:16 | stdlib | v1.24.6 | 1.25.9, 1.26.2 | 45 | 22 | 0 | 0.022 |
 | nginx:1.18 | libexpat1 | 2.2.6-2+deb10u1 | 2.2.6-2+deb10u7 | 19 | 17 | 0 | 0.359 |
 | nginx:1.18 | libc-bin | 2.28-10 | 2.28-10+deb10u4 | 19 | 10 | 0 | 0.883 |
 | nginx:1.18 | libc6 | 2.28-10 | 2.28-10+deb10u4 | 19 | 10 | 0 | 0.883 |
-| node:14 | python2.7-minimal | 2.7.16-2+deb10u1 | 2.7.16-2+deb10u4 | 17 | 10 | 0 | 0.36 |
-| node:14 | python2.7 | 2.7.16-2+deb10u1 | 2.7.16-2+deb10u4 | 17 | 10 | 0 | 0.36 |
+| node:14 | libpython2.7-minimal | 2.7.16-2+deb10u1 | 2.7.16-2+deb10u4 | 17 | 10 | 0 | 0.36 |
+| node:14 | libpython2.7-stdlib | 2.7.16-2+deb10u1 | 2.7.16-2+deb10u4 | 17 | 10 | 0 | 0.36 |

@@ -11,5 +11,5 @@ left join kev k using (cve)
 left join epss e using (cve)
 where fixed is not null
 group by 1, 2, 3
-order by kev_closed desc, crit_high_closed desc, findings_closed desc
+order by kev_closed desc, crit_high_closed desc, findings_closed desc, image, package
 limit 15;
